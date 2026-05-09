@@ -15,7 +15,7 @@ function cadastrar() {
     localStorage.setItem("usuarioDROP", JSON.stringify(usuario));
 
     alert("Cadastro realizado com sucesso!");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 function toggleSenha(idCampo, icone) {
