@@ -6,7 +6,7 @@ function login() {
 
     if (usuario && email === usuario.email && senha === usuario.senha) {
         alert("Login realizado com sucesso!");
-        window.location.href = "inicio.html";
+        window.location.href = "./html/inicio.html";
     } else {
         alert("Email ou senha incorretos!");
     }
