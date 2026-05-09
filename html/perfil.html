@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário - DROP</title>
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 
     <style>
         * {
@@ -155,7 +155,7 @@
 
     <!-- NAVBAR -->
     <div class="navbar">
-        <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
+        <a href="inicio.html"><img class="logo" src="../img/DROP_logo-transparent.png"></a>
         <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
     </div>
 
@@ -212,28 +212,8 @@
 
     </div>
 
-    <script>
-const usuario = JSON.parse(localStorage.getItem("usuarioDROP"));
+    <script src="../js/perfil.js"></script>
 
-if(usuario){
-
-    document.getElementById("perfilNome").textContent = usuario.nome || "-";
-    document.getElementById("perfilEmail").textContent = usuario.email || "-";
-    document.getElementById("perfilCpf").textContent = usuario.cpf || "-";
-    document.getElementById("perfilTelefone").textContent = usuario.telefone || "-";
-
-} else {
-
-    alert("Nenhum usuário encontrado. Faça login.");
-    window.location.href = "login.html";
-}
-
-function sair(){
-    localStorage.removeItem("usuarioLogado");
-    window.location.href = "index.html";
-}
-
-</script>
 </body>
 
 </html>

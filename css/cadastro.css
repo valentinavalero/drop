@@ -42,14 +42,37 @@ body {
 /* BOLHAS */
 .bubble {
     position: absolute;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
 }
 
-.b1 { width: 20px; height: 20px; top: 28%; left: 18%; }
-.b2 { width: 12px; height: 12px; top: 34%; left: 22%; }
-.b3 { width: 25px; height: 25px; bottom: 22%; right: 16%; }
-.b4 { width: 10px; height: 10px; bottom: 28%; right: 20%; }
+.b1 {
+    width: 20px;
+    height: 20px;
+    top: 28%;
+    left: 18%;
+}
+
+.b2 {
+    width: 12px;
+    height: 12px;
+    top: 34%;
+    left: 22%;
+}
+
+.b3 {
+    width: 25px;
+    height: 25px;
+    bottom: 22%;
+    right: 16%;
+}
+
+.b4 {
+    width: 10px;
+    height: 10px;
+    bottom: 28%;
+    right: 20%;
+}
 
 /* CARD */
 .card {
@@ -84,17 +107,17 @@ input {
     font-size: 14px;
 }
 
-.senha-box{
+.senha-box {
     position: relative;
     width: 100%;
 }
 
-.senha-box input{
+.senha-box input {
     width: 100%;
     padding-right: 45px;
 }
 
-.senha-box i{
+.senha-box i {
     position: absolute;
     right: 15px;
     top: 40%;

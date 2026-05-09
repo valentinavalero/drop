@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Login - DROP</title>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+
+    <div class="card">
+        <img src="../img/DROP_logo-transparent.png" class="logo">
+        <h2>Login</h2>
+
+        <input type="email" id="emailLogin" placeholder="Email">
+        <div class="senha-box">
+            <input type="password" id="senhaLogin" placeholder="Senha">
+            <i class="fa-solid fa-eye" onclick="toggleSenha('senhaLogin', this)"></i>
+        </div>
+
+        <a href="cadastro.html" class="link">Não tem conta? <b>CRIAR</b></a>
+
+        <button class="botao" onclick="login()">Acessar</button>
+    </div>
+
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

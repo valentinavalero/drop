@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação de Sangue - Cadastro</title>
+    <link rel="stylesheet" href="../css/formDoacao.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="alinha">
+                <h1>Doação de Sangue</h1>
+                <img class="logo" src="../img/DROP_logo.jpeg">
+            </div>
+            <p>Formulário de Cadastro e Triagem</p>
+        </div>
+
+        <form id="doacaoForm">
+
+            <!-- PROGRESS -->
+            <div class="progress-top">
+                <div class="progress-info">
+                    <span id="stepText">Passo 1 de 3</span>
+                    <span>Progresso</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- PASSO 1 -->
+            <div id="step1" class="form-section active">
+                <h2>1. Dados Pessoais</h2>
+
+                <div class="grid">
+                    <div>
+                        <label>Nome Completo *</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>Data de Nascimento *</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div>
+                        <label>CPF *</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>RG *</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>Telefone *</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+
+                    <div class="full">
+                        <label>Endereço Completo *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASSO 2 -->
+            <div id="step2" class="form-section">
+                <h2>2. Triagem Clínica</h2>
+
+                <label>Você está se sentindo bem hoje?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="bem"> Sim</label>
+                    <label><input type="radio" name="bem"> Não</label>
+                </div>
+
+                <br>
+
+                <label>Peso atual (kg)</label>
+                <input class="peso" type="number" required>
+
+                <div class="box">
+                    <p>Responda com sinceridade:</p>
+
+                    <div class="check-row">
+                        <span>Já teve hepatite?</span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="check-row">
+                        <span>Teve gripe nas últimas 2 semanas?</span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="check-row">
+                        <span>Fez tatuagem nos últimos 6 meses?</span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="check-row">
+                        <span>Nenhuma das opções</span>
+                        <input type="checkbox">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PASSO 3 -->
+            <div id="step3" class="form-section">
+                <h2>3. Consentimento</h2>
+
+                <div class="termo">
+                    <p>Declaro que as informações fornecidas são verdadeiras e estou ciente de que:</p>
+
+                    <ul>
+                        <li>Minhas respostas são confidenciais;</li>
+                        <li>O sangue será testado;</li>
+                        <li>Posso ser considerado inapto;</li>
+                        <li>Estou doando voluntariamente.</li>
+                    </ul>
+                </div>
+
+                <br>
+
+                <label class="aceite-termo">
+                    <input type="checkbox" required>
+                    <span>Li e concordo *</span>
+                </label>
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="nav">
+                <button type="button" class="prev hidden" id="btnPrev">← Anterior</button>
+                <button type="button" class="next" id="btnNext">Próximo →</button>
+                <button type="submit" class="submit hidden" id="btnSubmit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="popupSucesso" class="popup">
+        <div class="popup-box">
+            <h2>✅ Enviado com sucesso!</h2>
+            <p>Redirecionando...</p>
+        </div>
+    </div>
+
+    <script src="../js/formDoacao.js"></script>
+
+</body>
+
+</html>

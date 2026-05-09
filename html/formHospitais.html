@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Reposição de Sangue</title>
+    <link rel="stylesheet" href="../css/formHospitais.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="alinha">
+                <h1>Solicitação de Reposição</h1>
+                <img class="logo" src="../img/DROP_logo.jpeg">
+            </div>
+            <p>Formulário para Hospitais e Unidades de Saúde</p>
+        </div>
+
+        <form id="formulario">
+
+            <div class="section">
+                <h3>Identificação do Hospital</h3>
+
+                <div class="grid">
+                    <input type="text" placeholder="Nome do hospital" required>
+                    <input type="text" placeholder="Responsável pela solicitação" required>
+
+                    <input type="text" placeholder="Cargo">
+                    <input type="tel" placeholder="Telefone" required>
+
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Dados da Solicitação</h3>
+
+                <label>Tipo:</label>
+
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo" value="Urgente" required> Urgente</label>
+                    <label><input type="radio" name="tipo" value="Programada"> Programada</label>
+                </div>
+
+                <br>
+
+                <input type="date" required>
+
+                <div id="justificativaBox" style="display:none; margin-top:15px;">
+                    <textarea placeholder="Justifique a urgência..."></textarea>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h3>Informações do Sangue</h3>
+
+                <div class="grid">
+
+                    <select required>
+                        <option value="">Tipo sanguíneo</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+
+                    <input type="number" placeholder="Quantidade de bolsas" required>
+
+                    <select class="full" required>
+                        <option value="">Tipo de hemocomponente</option>
+                        <option>Sangue total</option>
+                        <option>Concentrado de hemácias</option>
+                        <option>Plaquetas</option>
+                        <option>Plasma</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Local para Doação</h3>
+
+                <div class="grid">
+                    <input type="text" placeholder="Nome do hemocentro" required>
+                    <input type="text" placeholder="Endereço" required>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h3>Observações</h3>
+                <textarea placeholder="Informações adicionais..."></textarea>
+            </div>
+
+            <div class="section">
+                <label style="display:flex; gap:10px; align-items:center;">
+                    <input type="checkbox" required style="width:auto;">
+                    Confirmo que as informações são verdadeiras
+                </label>
+            </div>
+
+            <button type="submit">Enviar Solicitação</button>
+
+        </form>
+
+    </div>
+
+    <!-- POPUP -->
+    <div id="popupSucesso" class="popup">
+        <div class="popup-box">
+            <h2>✅ Enviado com sucesso!</h2>
+            <p>Redirecionando...</p>
+        </div>
+    </div>
+
+    <script src="../js/formHospitais.js"></script>
+
+</body>
+
+</html>

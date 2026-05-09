@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/locaisDoacao.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="../css/locaisDoacao.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <title>Locais de Doação - DROP</title>
 
     <style>
@@ -17,10 +17,10 @@
 <body>
 
     <!-- NAVBAR -->
-<div class="navbar">
-    <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
-    <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
-</div>
+    <div class="navbar">
+        <a href="inicio.html"><img class="logo" src="../img/DROP_logo-transparent.png"></a>
+        <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
+    </div>
 
     <!-- HEADER -->
     <div class="header">
@@ -64,7 +64,8 @@
             'https://santacasasp.org.br/wp-content/uploads/2025/12/Hospital-Central-Santa-Casa-de-Sao-Paulo-scaled.png'
             )">
 
-            <img src="https://santacasasp.org.br/wp-content/uploads/2025/12/Hospital-Central-Santa-Casa-de-Sao-Paulo-scaled.png">
+            <img
+                src="https://santacasasp.org.br/wp-content/uploads/2025/12/Hospital-Central-Santa-Casa-de-Sao-Paulo-scaled.png">
             <div class="info">
                 <h3>Santa Casa</h3>
                 <p>Curitiba - PR</p>
@@ -74,18 +75,7 @@
 
     </div>
 
-    <script>
-
-        
-
-        function goToHospital(nome, cidade, imagem) {
-    const url =
-    `local.html?nome=${encodeURIComponent(nome)}&cidade=${encodeURIComponent(cidade)}&imagem=${encodeURIComponent(imagem)}`;
-
-    window.location.href = url;
-}
-
-    </script>
+    <script src="../js/locaisDoacao.js"></script>
 
 </body>
 
