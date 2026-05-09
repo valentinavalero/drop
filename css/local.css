@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: #c62828;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 100px;
+}
+
+/* VOLTAR */
+.breadcrumb {
+    color: #c62828;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* TÍTULO */
+h1 {
+    color: #d63b36;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #b92f2a;
+
+}
+
+/* LAYOUT */
+.content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* IMAGEM */
+.image-box {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-box img {
+    width: 500px;
+    border-radius: 12px;
+}
+
+/* MAPA */
+.map-box {
+    flex: 1;
+    min-width: 600px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* BOTÃO */
+.btn {
+    margin-top: 25px;
+    padding: 15px 150px;
+    background: #d63b36;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #b92f2a;
+}
+
+.btn-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

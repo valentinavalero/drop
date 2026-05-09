@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - DROP</title>
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .alinhando {
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        body {
+            background-color: #d3d3d3;
+        }
+
+
+        .container {
+            background: white;
+            width: 90%;
+            height: 500px;
+            margin-top: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* TOPO */
+        .topo {
+            background: #d91c1c;
+            color: white;
+            text-align: center;
+            padding: 30px 20px 50px;
+            position: relative;
+        }
+
+        .topo h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .topo p {
+            opacity: 0.9;
+        }
+
+        /* FOTO */
+        .foto {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 6px solid white;
+            object-fit: cover;
+            position: absolute;
+            left: 50%;
+            bottom: -65px;
+            transform: translateX(-50%);
+            background: #ddd;
+        }
+
+        /* CONTEÚDO */
+        .conteudo {
+            padding: 60px 35px 35px;
+        }
+
+        .secao {
+            margin-bottom: 25px;
+        }
+
+        .secao h2 {
+            color: #d91c1c;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f1d0d0;
+            padding-bottom: 8px;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .campo {
+            background: #ffe7e7;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .campo span {
+            display: block;
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .campo strong {
+            color: #333;
+        }
+
+        /* BOTÕES */
+        .botoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 280px;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+
+
+        .sair {
+            background: #c02020;
+            color: #ffffff;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .sair:hover {
+            background: #801515;
+        }
+
+        @media(max-width:600px) {
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
+        <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
+    </div>
+
+    <div class="alinhando">
+
+        <div class="container">
+
+            <div class="topo">
+                <h1>Meu Perfil</h1>
+                <p>Informações do usuário cadastrado</p>
+
+                <!-- FOTO DE PERFIL -->
+                <img src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png" alt="Foto de Perfil" class="foto">
+            </div>
+
+            <div class="conteudo">
+
+                <div class="secao">
+                    <h2>Dados Pessoais</h2>
+
+                    <div class="info">
+
+
+                        <div class="campo">
+                            <span>Nome</span>
+                            <strong id="perfilNome"></strong>
+                        </div>
+
+                        <div class="campo">
+                            <span>Email</span>
+                            <strong id="perfilEmail"></strong>
+                        </div>
+
+                        <div class="campo">
+                            <span>CPF/CNPJ</span>
+                            <strong id="perfilCpf"></strong>
+                        </div>
+
+                        <div class="campo">
+                            <span>Telefone</span>
+                            <strong id="perfilTelefone"></strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button onclick="sair()" class="sair">Sair</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+const usuario = JSON.parse(localStorage.getItem("usuarioDROP"));
+
+if(usuario){
+
+    document.getElementById("perfilNome").textContent = usuario.nome || "-";
+    document.getElementById("perfilEmail").textContent = usuario.email || "-";
+    document.getElementById("perfilCpf").textContent = usuario.cpf || "-";
+    document.getElementById("perfilTelefone").textContent = usuario.telefone || "-";
+
+} else {
+
+    alert("Nenhum usuário encontrado. Faça login.");
+    window.location.href = "login.html";
+}
+
+function sair(){
+    localStorage.removeItem("usuarioLogado");
+    window.location.href = "index.html";
+}
+
+</script>
+</body>
+
+</html>

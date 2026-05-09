@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/locaisDoacao.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <title>Locais de Doação - DROP</title>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<div class="navbar">
+    <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
+    <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
+</div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Locais de Doação</h1>
+    </div>
+
+    <!-- LISTA -->
+    <div class="list" id="list">
+
+        <div class="card" onclick="goToHospital(
+            'Hospital do Trabalhador',
+            'Curitiba - PR',
+            'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=2000&q=60'
+            )">
+
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1000&q=60">
+            <div class="info">
+                <h3>Hospital do Trabalhador</h3>
+                <p>Curitiba - PR</p>
+                <button class="btn">Visualizar</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="goToHospital(
+            'Hemocentro Campinas',
+            'Campinas - SP',
+            'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=2000&q=60'
+            )">
+
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=60">
+            <div class="info">
+                <h3>Hemocentro Campinas</h3>
+                <p>Campinas - SP</p>
+                <button class="btn">Visualizar</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="goToHospital(
+            'Santa Casa',
+            'Curitiba - PR',
+            'https://santacasasp.org.br/wp-content/uploads/2025/12/Hospital-Central-Santa-Casa-de-Sao-Paulo-scaled.png'
+            )">
+
+            <img src="https://santacasasp.org.br/wp-content/uploads/2025/12/Hospital-Central-Santa-Casa-de-Sao-Paulo-scaled.png">
+            <div class="info">
+                <h3>Santa Casa</h3>
+                <p>Curitiba - PR</p>
+                <button class="btn">Visualizar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        
+
+        function goToHospital(nome, cidade, imagem) {
+    const url =
+    `local.html?nome=${encodeURIComponent(nome)}&cidade=${encodeURIComponent(cidade)}&imagem=${encodeURIComponent(imagem)}`;
+
+    window.location.href = url;
+}
+
+    </script>
+
+</body>
+
+</html>

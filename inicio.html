@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/inicio.css">
+<link rel="stylesheet" href="css/navbar.css">
+<title>DROP - Início</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
+    <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    <div class="slides" id="slides">
+
+        <div onclick="window.location.href='sobre.html'" class="slide">
+            <img src="./img/banner1.png">
+        </div>
+
+        <div onclick="window.location.href='sobre.html'" class="slide">
+            <img src="./img/banner2.png">
+        </div>
+
+        <div onclick="window.location.href='sobre.html'" class="slide">
+            <img src="./img/banner3.png">
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <span onclick="goToSlide(0)" class="active"></span>
+        <span onclick="goToSlide(1)"></span>
+        <span onclick="goToSlide(2)"></span>
+    </div>
+</div>
+
+<!-- BOTÕES -->
+<div class="actions">
+    <a href="parcerias.html" class="btn btn-red">Parceria com hospitais</a>
+    <a href="locaisDoacao.html" class="btn btn-light">Locais de Doação</a>
+    <a href="voluntariado.html" class="btn btn-red">Voluntários</a>
+</div>
+
+<script>
+let index = 0;
+const slides = document.getElementById("slides");
+const dots = document.querySelectorAll(".controls span");
+
+function showSlide(i) {
+    index = i;
+    slides.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[i].classList.add("active");
+}
+
+function goToSlide(i) {
+    showSlide(i);
+}
+
+function autoSlide() {
+    index++;
+    if (index > 2) index = 0;
+    showSlide(index);
+}
+
+setInterval(autoSlide, 4000);
+</script>
+
+</body>
+</html>

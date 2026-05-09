@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/local.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <title>Hospital - DROP</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<div class="navbar">
+    <a href="inicio.html"><img class="logo" src="./img/DROP_logo-transparent.png"></a>
+    <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
+</div>
+
+    <div class="container">
+
+        <div class="breadcrumb" onclick="window.history.back()">
+            Locais >
+        </div>
+
+        <!-- NOME -->
+        <h1 id="nomeHospital">Hospital</h1>
+
+        <!-- ENDEREÇO -->
+        <p id="cidadeHospital">Cidade</p>
+
+        <div class="content">
+
+            <!-- IMAGEM -->
+            <div class="image-box">
+                <img id="imagemHospital" src="">
+            </div>
+
+            <div class="btn-area">
+                <!-- MAPA -->
+                <div class="map-box">
+                    <iframe id="mapa"></iframe>
+                </div>
+
+                <button onclick="window.location.href='voluntariado.html'" class="btn">
+                    Quero ser doador
+                </button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        /* PEGAR DADOS DA URL */
+        const params = new URLSearchParams(window.location.search);
+
+        const nome = params.get("nome");
+        const cidade = params.get("cidade");
+        const imagem = params.get("imagem");
+
+        /* ELEMENTOS */
+        const titulo = document.getElementById("nomeHospital");
+        const cidadeTexto = document.getElementById("cidadeHospital");
+        const mapa = document.getElementById("mapa");
+        const img = document.getElementById("imagemHospital");
+
+        /* ALTERAR DADOS */
+        if (nome) {
+            titulo.innerText = nome;
+        }
+
+        if (cidade) {
+            cidadeTexto.innerText = cidade;
+        }
+
+        if (imagem) {
+            img.src = imagem;
+        }
+
+        if (nome || cidade) {
+            const query = encodeURIComponent(nome + " " + cidade);
+            mapa.src = `https://www.google.com/maps?q=${query}&output=embed`;
+        }
+
+    </script>
+
+</body>
+
+</html>
