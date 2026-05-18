@@ -159,3 +159,12 @@ button {
 button:hover {
     background: #e88d96;
 }
+
+/*Responsividade do site para tablet e celular*/
+
+@media (max-width: 1024px) {
+  .card {
+    width: 40vh; /* Reduz a largura do bloco principal */
+  }
+  
+}
