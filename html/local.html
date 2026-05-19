@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../css/local.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <title>Hospital - DROP</title>
@@ -17,17 +17,22 @@
         <a href="perfil.html"><img class="perfil" src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"></a>
     </div>
 
+
     <div class="container">
 
-        <div class="breadcrumb" onclick="window.history.back()">
-            Locais >
+        <div class="alinhamento">
+
+            <div class="breadcrumb" onclick="window.history.back()">
+                Locais >
+            </div>
+
+            <!-- NOME -->
+            <h1 id="nomeHospital">Hospital</h1>
+
+            <!-- ENDEREÇO -->
+            <p id="cidadeHospital">Cidade</p>
+
         </div>
-
-        <!-- NOME -->
-        <h1 id="nomeHospital">Hospital</h1>
-
-        <!-- ENDEREÇO -->
-        <p id="cidadeHospital">Cidade</p>
 
         <div class="content">
 
@@ -52,9 +57,10 @@
 
 
 
+
     </div>
 
-    <script src="../js/locaisDoacao.js"></script>
+    <script src="../js/local.js"></script>
 
 </body>
 

@@ -46,6 +46,10 @@ body {
 /* CARD */
 .card {
     background: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 30px auto;
     padding: 40px;
     border-radius: 18px;
@@ -86,4 +90,11 @@ body {
 
 .btn:hover {
     background: #b92f2a;
+}
+
+@media (max-width: 767px) {
+  .card{
+    height: 520px;
+  }
+
 }
