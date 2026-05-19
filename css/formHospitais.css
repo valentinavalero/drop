@@ -166,6 +166,99 @@ button:hover {
     color: #6b7280;
 }
 
+/* FORM STEPS */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+/* PROGRESS */
+.progress-top {
+    margin-bottom: 30px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.progress-bg {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+}
+
+.progress-fill {
+    height: 10px;
+    background: #dc2626;
+    width: 33%;
+    border-radius: 999px;
+    transition: .3s;
+}
+
+/* NAV */
+.nav {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.prev {
+    background: none;
+    color: #4b5563;
+    width: auto;
+}
+
+.next {
+    background: #dc2626;
+    width: auto;
+}
+
+.next:hover {
+    background: #b91c1c;
+}
+
+.submit {
+    background: #16a34a;
+    width: auto;
+}
+
+.submit:hover {
+    background: #15803d;
+}
+
+.hidden {
+    display: none;
+}
+
+.aceite-termo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.aceite-termo input {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.aceite-termo span {
+    line-height: 1.4;
+}
+
 @keyframes subir {
     from {
         transform: translateY(30px);
