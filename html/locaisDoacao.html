@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../css/locaisDoacao.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <title>Locais de Doação - DROP</title>
@@ -27,6 +28,15 @@
         <h1>Locais de Doação</h1>
     </div>
 
+    <!-- PESQUISA -->
+    <div class="search-container">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar hospital ou cidade...">
+
+    </div>
+
     <!-- LISTA -->
     <div class="list" id="list">
 
@@ -42,6 +52,10 @@
                 <p>Curitiba - PR</p>
                 <button class="btn">Visualizar</button>
             </div>
+        </div>
+
+        <div class="no-results" id="noResults">
+            Nenhum hospital encontrado.
         </div>
 
         <div class="card" onclick="goToHospital(

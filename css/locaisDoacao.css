@@ -104,3 +104,40 @@ body {
 .btn:hover {
     background: #b92f2a;
 }
+
+/* PESQUISA */
+.search-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* SEM RESULTADOS */
+.no-results {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #777;
+    font-weight: 600;
+}

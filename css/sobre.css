@@ -28,9 +28,9 @@ body {
     margin-bottom: 40px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     padding: 35px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,22 +73,22 @@ body {
 }
 
 /* RESPONSIVO */
-@media(max-width: 768px){
+@media(max-width: 768px) {
 
-    .container{
+    .container {
         padding: 25px;
         gap: 25px;
     }
 
-    .header h1{
+    .header h1 {
         font-size: 28px;
     }
 
-    .text-box p{
+    .text-box p {
         font-size: 16px;
     }
 
-    .image-box img{
+    .image-box img {
         height: 250px;
     }
 }

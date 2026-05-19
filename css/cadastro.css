@@ -12,31 +12,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-/* FUNDO DECORATIVO */
+.background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* CÍRCULO SUPERIOR */
 .background::before {
     content: "";
     position: absolute;
-    width: 900px;
-    height: 900px;
-    border: 60px solid #fff;
+
+    width: 500px;
+    height: 500px;
+
+    border: 35px solid white;
     border-radius: 50%;
-    top: -300px;
-    right: -300px;
+
+    top: -250px;
+    right: -250px;
+
     opacity: 0.9;
 }
 
 .background::after {
     content: "";
     position: absolute;
+
     width: 500px;
     height: 500px;
-    border: 40px solid #fff;
+
+    border: 35px solid white;
     border-radius: 50%;
+
     bottom: -250px;
-    left: -200px;
+    left: -250px;
+
     opacity: 0.9;
 }
 
@@ -48,41 +62,51 @@ body {
 }
 
 .b1 {
-    width: 20px;
-    height: 20px;
-    top: 28%;
-    left: 18%;
+    width: 2vw;
+    height: 2vw;
+    min-width: 20px;
+    min-height: 20px;
+    top: 30%;
+    left: 20%;
 }
 
 .b2 {
-    width: 12px;
-    height: 12px;
-    top: 34%;
-    left: 22%;
+    width: 1.3vw;
+    height: 1.3vw;
+    min-width: 12px;
+    min-height: 12px;
+    top: 35%;
+    left: 24%;
 }
 
 .b3 {
-    width: 25px;
-    height: 25px;
-    bottom: 22%;
-    right: 16%;
+    width: 2vw;
+    height: 2vw;
+    min-width: 25px;
+    min-height: 25px;
+    bottom: 25%;
+    right: 18%;
 }
 
 .b4 {
-    width: 10px;
-    height: 10px;
-    bottom: 28%;
-    right: 20%;
+    width: 1.3vw;
+    height: 1.3vw;
+    min-width: 10px;
+    min-height: 10px;
+    bottom: 30%;
+    right: 22%;
 }
 
 /* CARD */
 .card {
-    position: relative;
+
     z-index: 2;
     background: #e9e9e9;
-    padding: 35px 30px;
+    padding: 40px 30px;
     border-radius: 25px;
-    width: 390px;
+    width: 85%;
+    max-width: 390px;
+
     text-align: center;
 }
 
@@ -160,11 +184,3 @@ button:hover {
     background: #e88d96;
 }
 
-/*Responsividade do site para tablet e celular*/
-
-@media (max-width: 1024px) {
-  .card {
-    width: 40vh; /* Reduz a largura do bloco principal */
-  }
-  
-}
